@@ -823,6 +823,68 @@ body {
     transform: translateX(4px);
 }
 
+.contact__success-message {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+    border-radius: var(--border-radius-lg);
+    border: 2px solid rgba(99, 102, 241, 0.2);
+    animation: fadeInUp 0.6s ease;
+}
+
+.contact__success-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 1.5rem;
+    background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+    animation: scaleIn 0.5s ease 0.2s both;
+}
+
+.contact__success-title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.contact__success-text {
+    font-size: 1.0625rem;
+    color: var(--text-light);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact__success-btn {
+    margin-top: 1rem;
+}
+
+.contact__form-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1.75rem;
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
 /* ===== Footer ===== */
 .footer {
     background-color: var(--text-dark);
