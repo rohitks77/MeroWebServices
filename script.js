@@ -69,41 +69,61 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 
 // ===== Contact Form Submission =====
 const contactForm = document.getElementById('contact-form');
+const contactSuccess = document.getElementById('contact-success');
+const contactFormFields = document.getElementById('contact-form-fields');
+const contactResetBtn = document.getElementById('contact-reset-btn');
 
-contactForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        
+        // Get form values
+        const formData = new FormData(contactForm);
+        const name = formData.get('name');
+        const email = formData.get('email');
+        const phone = formData.get('phone');
+        const message = formData.get('message');
+        
+        // Hide form fields and show success message
+        contactFormFields.style.display = 'none';
+        contactSuccess.style.display = 'block';
+        
+        // Scroll to success message
+        contactSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // Reset form (but keep it hidden)
+        contactForm.reset();
+        
+        // In a real application, you would send this data to your backend:
+        // fetch('/api/contact', {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify({ name, email, phone, message })
+        // })
+        // .then(response => response.json())
+        // .then(data => {
+        //     contactFormFields.style.display = 'none';
+        //     contactSuccess.style.display = 'block';
+        //     contactForm.reset();
+        // })
+        // .catch(error => {
+        //     alert('Error sending message. Please try again.');
+        // });
+    });
     
-    // Get form values
-    const formData = new FormData(contactForm);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const phone = formData.get('phone');
-    const message = formData.get('message');
-    
-    // Here you would typically send the data to a server
-    // For now, we'll just show an alert
-    alert(`Thank you, ${name}! We've received your message and will get back to you soon at ${email}.`);
-    
-    // Reset form
-    contactForm.reset();
-    
-    // In a real application, you would send this data to your backend:
-    // fetch('/api/contact', {
-    //     method: 'POST',
-    //     headers: {
-    //         'Content-Type': 'application/json',
-    //     },
-    //     body: JSON.stringify({ name, email, phone, message })
-    // })
-    // .then(response => response.json())
-    // .then(data => {
-    //     alert('Message sent successfully!');
-    //     contactForm.reset();
-    // })
-    // .catch(error => {
-    //     alert('Error sending message. Please try again.');
-    // });
-});
+    // Reset button functionality
+    if (contactResetBtn) {
+        contactResetBtn.addEventListener('click', () => {
+            contactSuccess.style.display = 'none';
+            contactFormFields.style.display = 'block';
+            contactForm.reset();
+            // Scroll to form
+            contactFormFields.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    }
+}
 
 // ===== Intersection Observer for Fade-in Animations =====
 const observerOptions = {
