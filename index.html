@@ -457,21 +457,96 @@
             <h2 class="section__title">Get In Touch</h2>
             <p class="section__subtitle">Ready to start your project? Contact us today!</p>
             <div class="contact__container">
-                <form class="contact__form" id="contact-form">
-                    <div class="contact__input-group">
-                        <input type="text" name="name" class="contact__input" placeholder="Your Name" required>
+                <div class="contact__wrapper">
+                    <div class="contact__info">
+                        <h3 class="contact__info-title">Let's Discuss Your Project</h3>
+                        <p class="contact__info-text">Fill out the form and we'll get back to you within 24 hours. We're here to help bring your vision to life.</p>
+                        <div class="contact__info-items">
+                            <div class="contact__info-item">
+                                <div class="contact__info-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="contact__info-label">Phone</h4>
+                                    <a href="tel:+9779746686607" class="contact__info-value">+977 974 668 6607</a>
+                                </div>
+                            </div>
+                            <div class="contact__info-item">
+                                <div class="contact__info-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                        <polyline points="22,6 12,13 2,6"></polyline>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="contact__info-label">Email</h4>
+                                    <a href="mailto:info@merowebsolution.com" class="contact__info-value">info@merowebsolution.com</a>
+                                </div>
+                            </div>
+                            <div class="contact__info-item">
+                                <div class="contact__info-icon">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                        <circle cx="12" cy="10" r="3"></circle>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <h4 class="contact__info-label">Location</h4>
+                                    <p class="contact__info-value">Nepal</p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="contact__input-group">
-                        <input type="email" name="email" class="contact__input" placeholder="Your Email" required>
-                    </div>
-                    <div class="contact__input-group">
-                        <input type="tel" name="phone" class="contact__input" placeholder="Your Phone" required>
-                    </div>
-                    <div class="contact__input-group">
-                        <textarea name="message" class="contact__input contact__textarea" rows="5" placeholder="Your Message" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn--primary">Send Message</button>
-                </form>
+                    <form class="contact__form" id="contact-form">
+                        <div class="contact__input-group">
+                            <label for="name" class="contact__label">Full Name</label>
+                            <div class="contact__input-wrapper">
+                                <svg class="contact__input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                    <circle cx="12" cy="7" r="4"></circle>
+                                </svg>
+                                <input type="text" id="name" name="name" class="contact__input" placeholder="Enter your full name" required>
+                            </div>
+                        </div>
+                        <div class="contact__input-group">
+                            <label for="email" class="contact__label">Email Address</label>
+                            <div class="contact__input-wrapper">
+                                <svg class="contact__input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                                <input type="email" id="email" name="email" class="contact__input" placeholder="Enter your email address" required>
+                            </div>
+                        </div>
+                        <div class="contact__input-group">
+                            <label for="phone" class="contact__label">Phone Number</label>
+                            <div class="contact__input-wrapper">
+                                <svg class="contact__input-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
+                                <input type="tel" id="phone" name="phone" class="contact__input" placeholder="Enter your phone number" required>
+                            </div>
+                        </div>
+                        <div class="contact__input-group">
+                            <label for="message" class="contact__label">Message</label>
+                            <div class="contact__input-wrapper">
+                                <svg class="contact__input-icon contact__input-icon--textarea" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                <textarea id="message" name="message" class="contact__input contact__textarea" rows="5" placeholder="Tell us about your project..." required></textarea>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn--primary contact__submit">
+                            <span>Send Message</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     </section>
